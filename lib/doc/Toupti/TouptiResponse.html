@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TouptiResponse</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class TouptiResponse</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_response.php.html">/response.php</a> (line <span class="field">5</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																				<div class="var-title">
+					static <span class="var-type">mixed</span>
+					<a href="#$phrases" title="details" class="var-name">$phrases</a>
+				</div>
+																				<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$headers" title="details" class="var-name">$headers</a>
+				</div>
+																			</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																				
+												<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#get_header" title="details" class="method-name">get_header</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$header</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Array</span>
+										<a href="#get_headers" title="details" class="method-name">get_headers</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_header" title="details" class="method-name">set_header</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$header</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_status" title="details" class="method-name">set_status</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$code</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$phrases" id="$phrases"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$phrases</span>
+			 = <span class="var-default">array(<br /><br />        // 1xx: Informational - Request received, continuing process<br />        100 =&gt; 'Continue',<br />        101 =&gt; 'Switching Protocols',<br /><br />        // 2xx: Success - The action was successfully received, understood and<br />        // accepted<br />        200 =&gt; 'OK',<br />        201 =&gt; 'Created',<br />        202 =&gt; 'Accepted',<br />        203 =&gt; 'Non-Authoritative Information',<br />        204 =&gt; 'No Content',<br />        205 =&gt; 'Reset Content',<br />        206 =&gt; 'Partial Content',<br /><br />        // 3xx: Redirection - Further action must be taken in order to complete<br />        // the request<br />        300 =&gt; 'Multiple Choices',<br />        301 =&gt; 'Moved Permanently',<br />        302 =&gt; 'Found',  // 1.1<br />        303 =&gt; 'See Other',<br />        304 =&gt; 'Not Modified',<br />        305 =&gt; 'Use Proxy',<br />        307 =&gt; 'Temporary Redirect',<br /><br />        // 4xx: Client Error - The request contains bad syntax or cannot be<br />        // fulfilled<br />        400 =&gt; 'Bad Request',<br />        401 =&gt; 'Unauthorized',<br />        402 =&gt; 'Payment Required',<br />        403 =&gt; 'Forbidden',<br />        404 =&gt; 'Not Found',<br />        405 =&gt; 'Method Not Allowed',<br />        406 =&gt; 'Not Acceptable',<br />        407 =&gt; 'Proxy Authentication Required',<br />        408 =&gt; 'Request Timeout',<br />        409 =&gt; 'Conflict',<br />        410 =&gt; 'Gone',<br />        411 =&gt; 'Length Required',<br />        412 =&gt; 'Precondition Failed',<br />        413 =&gt; 'Request Entity Too Large',<br />        414 =&gt; 'Request-URI Too Long',<br />        415 =&gt; 'Unsupported Media Type',<br />        416 =&gt; 'Requested Range Not Satisfiable',<br />        417 =&gt; 'Expectation Failed',<br /><br />        // 5xx: Server Error - The server failed to fulfill an apparently<br />        // valid request<br />        500 =&gt; 'Internal Server Error',<br />        501 =&gt; 'Not Implemented',<br />        502 =&gt; 'Bad Gateway',<br />        503 =&gt; 'Service Unavailable',<br />        504 =&gt; 'Gateway Timeout',<br />        505 =&gt; 'HTTP Version Not Supported',<br />        509 =&gt; 'Bandwidth Limit Exceeded',<br /><br />    )</span>			(line <span class="line-number">9</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$headers" id="$headers"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$headers</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">7</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodget_header" id="get_header"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_header</span> (line <span class="line-number">89</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return HTTP header</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> header value or null</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			get_header
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$header</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$header</span><span class="var-description">: header name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_headers" id="get_headers"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_headers</span> (line <span class="line-number">99</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return all HTTP headers</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> http header value</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			get_headers
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodset_header" id="set_header"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_header</span> (line <span class="line-number">80</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set HTTP Header</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_header
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$header</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$header</span><span class="var-description">: header name (like Content-Type)</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$value</span><span class="var-description">: header value (like text/xml)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_status" id="set_status"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_status</span> (line <span class="line-number">71</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set HTTP Status code</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_status
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$code</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 19 Dec 2010 22:42:56 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
