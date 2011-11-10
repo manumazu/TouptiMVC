@@ -60,6 +60,27 @@ class Controller
         }
         return new View($tpl, $this->req->params);
     }
+    
+    /**
+     * Allow a controller to delegate the action handling to another controller action.
+     *
+     * @param string  $controller_name  name of the controller class
+     * @param string  $action 
+     * @param array   $args
+     *
+     * @return mixed
+     */
+    public function delegate($controller_name, $action, $args = null)
+    {
+        $controller = new $controller_name();
+        //$controller->setup();
+        //$r = $controller->before_action($action, $args);
+
+        //if (is_null($r))
+        $r = call_user_func_array(array($controller, $action), $args);
+
+        return $r;
+    }    
    
     /**
      * quick alias to exit without any layout.

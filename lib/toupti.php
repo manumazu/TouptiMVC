@@ -30,6 +30,7 @@ require('middleware.php');
 require('route.php');
 require('request.php');
 require('response.php');
+require('model.php');
 require('controller.php');
 require('view.php');
   	
