@@ -142,15 +142,27 @@ class Toupti extends Middleware
         $this->call_action($controller_class, $this->action);
     }
     
-    /**
-     * Autoloader for Controllers
+	/**
+     * Autoloader for Controllers and Models
      * @param $class
      */
 	public static function autoload( $class ) {
-        $file = dirname(dirname(__FILE__)) . '/modules/' . str_replace('_', DIRECTORY_SEPARATOR, $class . '.php');
-        if ( file_exists($file) ) {
-            require $file;
+
+		if (strpos($class, 'Controller') > 1)
+        {
+        	$file = dirname(dirname(__FILE__)) . '/modules/' . str_replace('_', DIRECTORY_SEPARATOR, $class . '.php');
+	        if ( file_exists($file) ) {
+	            require $file;
+	        }
         }
+		else
+		{
+		    $class = str_replace('Controller', '', $class);
+		    $file = dirname(dirname(__FILE__)) . '/models/' . str_replace('_', DIRECTORY_SEPARATOR, strtolower($class) . '.php');
+	        if ( file_exists($file) ) {
+	            require $file;
+	        }
+		}
     }
 
     /**
